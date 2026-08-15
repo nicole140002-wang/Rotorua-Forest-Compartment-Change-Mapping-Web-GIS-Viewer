@@ -114,18 +114,18 @@ The total study area remained approximately 1,483 ha, while the distribution of 
 
 These changes indicate a strong overall shift toward established standing plantation forest, consistent with forest growth and replanting observed in the multi-temporal aerial imagery.  
 
-<p align="center">
+<p align="left">
   <img width="600" alt="Forest condition area comparison" src="https://github.com/user-attachments/assets/5e59eee1-bbea-4e55-8c46-9ad15105fa6a" />
 </p>
 
-<p align="center">
+<p align="left">
   <em>Figure 8. Total forest compartment area by condition for the 2015–2017 and 2024–2025 imagery periods.</em>
 </p>
 
 ### 2. Forest Condition Transitions
 The table below summarises forest-condition transitions between the 2015–2017 and 2024–2025 imagery periods, ranked by total transition area.  
 
-<div align="center">
+<div align="left">
 
 <table>
   <thead>
