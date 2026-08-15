@@ -43,13 +43,6 @@ A Rotorua study area containing **38 forest compartments** was reviewed and upda
   <em>Figure 2. Rotorua study area and the 38 forest compartments included in the aerial-imagery review.</em>
 </p>
 
-## Key Questions
-This project focuses on three practical GIS questions:
-
-**(1) How has forest condition changed between the 2015–2017 and 2024–2025 imagery periods?
-(2) Which forest compartments require spatial or attribute updates?
-(3) How can the identified changes be communicated efficiently through an interactive Web GIS application?**
-
 ## Data Sources
 | Dataset | Period | Source | Purpose |
 |---|---|---|---|
