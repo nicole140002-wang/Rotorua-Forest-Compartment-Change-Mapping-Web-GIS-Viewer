@@ -44,20 +44,12 @@ The workflow included:
 
 ### 1. Imagery preparation
 
-LINZ Rural Aerial Imagery was prepared and mosaic in ArcGIS Pro.
+LINZ Rural Aerial Imagery was prepared and mosaicked in ArcGIS Pro.
 Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GIS use.
 
 ### 2. Compartment review
 38 forest compartments were visually reviewed against the 2024–2025 imagery.
-Attributes recorded include:
-
-| compartment ID | 
-| area | 
-| historical status | 
-| recent status | 
-| change type | 
-| change confidence | 
-| change description | 
+Attributes included compartment ID, area, historical status, recent status, change type, change confidence and change description. 
 
 <img width="2161" height="1214" alt="image" src="https://github.com/user-attachments/assets/91b9b797-a73f-4842-9dbe-0047c8e12ed1" />
 
@@ -93,8 +85,6 @@ Key functions include:
 ## Results
 
 38 compartments reviewed
-<img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
-
 Final change statistics are currently being prepared.
 Planned outputs:
 compartments by change type
