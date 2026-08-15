@@ -4,6 +4,8 @@ A geospatial forestry mapping and Web GIS project using multi-temporal LINZ rura
 
 The project demonstrates a practical workflow from **aerial imagery interpretation and GIS data maintenance through to interactive Web GIS delivery**.
 
+## Final Output
+
 <img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
 
 ## Project Overview
