@@ -72,13 +72,13 @@ Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GI
 
 ### 2. Compartment Editing & Attribute Update
 
-A total of **38 forest compartments** were reviewed and maintained in ArcGIS Pro using the 2024–2025 aerial imagery.
+A total of 38 forest compartments were reviewed in ArcGIS Pro using the 2024–2025 aerial imagery.
 
-Compartment geometry and key attributes were updated where required, including compartment ID, area, current forest status, change confidence and supporting edit notes.  
+Where visible compartment boundaries no longer aligned with recent forest conditions, polygon geometry was edited at the vertex level. Key attributes were also updated to record compartment ID, area, current forest status, change confidence and supporting edit notes.
 
-<img width="1503" height="1160" alt="image" src="https://github.com/user-attachments/assets/6d0d2ff4-ea36-492b-bd48-2644a13ca35e" />
+<p align="center"> <img width="750" alt="Forest compartment boundary editing in ArcGIS Pro" src="YOUR_IMAGE_URL" /> </p>
 
-*Figure 3. Forest compartment editing in ArcGIS Pro using recent aerial imagery to assess compartment condition, boundaries, and associated attributes.*
+<p align="center"> <em>Figure 3. Vertex-level editing of a forest compartment boundary in ArcGIS Pro using recent aerial imagery as spatial reference.</em> </p>
 
 ### 3. Multi-temporal Forest Change Interpretation
 
