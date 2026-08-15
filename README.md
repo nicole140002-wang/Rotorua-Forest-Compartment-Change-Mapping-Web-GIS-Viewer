@@ -70,17 +70,21 @@ The workflow included:
 LINZ Rural Aerial Imagery was prepared and mosaicked in ArcGIS Pro.
 Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GIS use.
 
-### 2. Compartment review
-38 forest compartments were visually reviewed against the 2024–2025 imagery.
-Attributes included compartment ID, area, historical status, recent status, change type, change confidence and change description. 
+### 2. Compartment Editing & Attribute Update
 
-<img width="2161" height="1214" alt="image" src="https://github.com/user-attachments/assets/91b9b797-a73f-4842-9dbe-0047c8e12ed1" />
+A total of **38 forest compartments** were reviewed and maintained in ArcGIS Pro using the 2024–2025 aerial imagery.
 
-*Figure 3. Forest compartment review in ArcGIS Pro using recent aerial imagery to assess compartment condition, boundaries, and associated attributes.*
+Compartment geometry and key attributes were updated where required, including compartment ID, area, current forest status, change confidence and supporting edit notes.  
 
-### 3. Forest Condition Update & QA/QC
+<img width="1503" height="1160" alt="image" src="https://github.com/user-attachments/assets/6d0d2ff4-ea36-492b-bd48-2644a13ca35e" />
 
-Forest compartment boundaries, conditions and attributes were reviewed using the 2015–2017 and 2024–2025 aerial imagery. Geometry, topology and attribute consistency were then checked before the updated layer was prepared for Web GIS use.
+*Figure 3. Forest compartment editing in ArcGIS Pro using recent aerial imagery to assess compartment condition, boundaries, and associated attributes.*
+
+### 3. Multi-temporal Forest Change Interpretation
+
+Historical **2015–2017** imagery was compared with the **2024–2025** imagery to identify and classify changes in forest condition.
+
+Representative examples of the interpreted changes are shown below.
 
 #### Example 1 — Young Plantation to Established Forest Canopy
 
@@ -105,6 +109,46 @@ Forest compartment boundaries, conditions and attributes were reviewed using the
 *Figure 6. Forest regeneration from post-harvest bare ground in 2015–2017 to an established plantation forest by 2024–2025.*
 
 **Comparison:** The 2015–2017 imagery shows a recently harvested compartment dominated by exposed ground with little established tree cover. By 2024–2025, the area had been replanted and developed into a well-established plantation forest with substantial canopy cover.
+
+#### QA/QC
+
+Before Web GIS publication, **Pairwise Intersect** was used to identify unintended overlaps and potential topology issues between forest compartment polygons. Detected intersections were reviewed at multiple map scales to distinguish genuine boundary relationships from geometry errors, and compartment boundaries were corrected where required.
+
+<p align="center">
+  <img width="820"
+       alt="Overview of detected compartment topology issues"
+       src="https://github.com/user-attachments/assets/ab38780f-28a6-4ec9-a987-374ac5e2f19c" />
+</p>
+
+<p align="center">
+  <em>(a) Overview — locations of detected overlap/intersection issues across the compartment dataset.</em>
+</p>
+
+<table>
+<tr>
+<td width="50%" align="center">
+<img width="100%"
+     alt="Intermediate view of compartment topology issue"
+     src="https://github.com/user-attachments/assets/90fb79fd-1fc4-45e4-9fb9-8f15f4c81eab" />
+<br>
+<em>(b) Intermediate inspection — closer review of the relationship between adjacent compartment boundaries.</em>
+</td>
+
+<td width="50%" align="center">
+<img width="100%"
+     alt="Detailed view of compartment topology issue"
+     src="https://github.com/user-attachments/assets/f9f5a798-fcac-4e35-8618-2b12d1fd003e" />
+<br>
+<em>(c) Detailed inspection — close-up assessment of the detected intersection used to verify and correct boundary geometry.</em>
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <em>Figure 7. Pairwise Intersect QA/QC workflow showing forest-compartment topology review from study-area overview to detailed boundary inspection.</em>
+</p>
+
+
 
 ### 4. Web GIS
 An interactive viewer was developed using ArcGIS Maps SDK for JavaScript.
