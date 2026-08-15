@@ -1,0 +1,14 @@
+# Large raster imagery
+imagery/
+original_image/
+
+# Raster files
+*.tif
+*.tiff
+*.tif.xml
+*.aux.xml
+*.ovr
+
+# Temporary files
+.DS_Store
+Thumbs.db

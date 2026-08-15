@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <title>Forestry Before / After Viewer</title>
+
+  <script
+    type="module"
+    src="https://js.arcgis.com/5.1/"
+  ></script>
+
+  <style>
+    html,
+    body,
+    arcgis-map {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .year-label {
+      position: absolute;
+      top: 20px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    #beforeLabel {
+      left: 70px;
+    }
+
+    #afterLabel {
+      right: 30px;
+    }
+
+    #status {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ============================= */
+  /* Compartment selector panel    */
+  /* ============================= */
+
+  #compartment-panel {
+    position: absolute;
+
+    top: 85px;
+    left: 70px;
+
+    z-index: 20;
+
+    width: 210px;
+
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 6px;
+
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.20);
+
+    font-family: Arial, sans-serif;
+  }
+
+
+  #compartment-panel label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    color: #333;
+  }
+
+
+  #compartment-select {
+    width: 100%;
+
+    padding: 8px;
+
+    font-size: 14px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 4px;
+
+    background: white;
+
+    cursor: pointer;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div
+    id="beforeLabel"
+    class="year-label">
+    BEFORE — 2017
+  </div>
+
+  <div
+    id="afterLabel"
+    class="year-label">
+    AFTER
+  </div>
+
+  <div id="status">
+    Loading imagery...
+  </div>
+
+
+
+<div id="compartment-panel">
+  <label for="compartment-select">
+    Compartment
+  </label>
+
+  <select id="compartment-select">
+    <option value="">
+      Select a compartment
+    </option>
+  </select>
+</div>
+
+  <arcgis-map
+  id="mapView"
+  popup-component-enabled>
+
+    <arcgis-zoom slot="top-left"></arcgis-zoom>
+
+    <arcgis-swipe
+      id="swipe"
+      position="50">
+    </arcgis-swipe>
+
+  </arcgis-map>
+
+
+  <script type="module">
+
+    const [
+  Map,
+  ImageryTileLayer,
+  GeoJSONLayer,
+  rasterFunctionUtils,
+  projectOperator
+] =
+  await $arcgis.import([
+    "@arcgis/core/Map.js",
+    "@arcgis/core/layers/ImageryTileLayer.js",
+    "@arcgis/core/layers/GeoJSONLayer.js",
+    "@arcgis/core/layers/support/rasterFunctionUtils.js",
+    "@arcgis/core/geometry/operators/projectOperator.js"
+  ]);
+
+
+    const mapElement =
+      document.querySelector("#mapView");
+
+    const swipe =
+      document.querySelector("#swipe");
+
+    const compartmentSelect =
+  document.querySelector(
+    "#compartment-select"
+  );
+
+    const status =
+      document.querySelector("#status");
+
+
+    // -----------------------------
+    // Before COG
+    // -----------------------------
+
+    const beforeUrl =
+      new URL(
+        "./imagery/before_cog.tif",
+        window.location.href
+      ).href;
+
+
+    const beforeLayer =
+      new ImageryTileLayer({
+
+        url: beforeUrl,
+
+        title:
+          "Before imagery"
+
+      });
+
+
+    // -----------------------------
+    // After COG
+    // -----------------------------
+
+    const afterUrl =
+      new URL(
+        "./imagery/after_cog.tif",
+        window.location.href
+      ).href;
+
+
+    const afterLayer =
+      new ImageryTileLayer({
+
+        url: afterUrl,
+
+        title:
+          "After imagery"
+
+      });
+    
+    // -----------------------------
+// Forest compartments
+// -----------------------------
+
+const forestLayer =
+  new GeoJSONLayer({
+
+    url: "./data/forest_compartments.geojson",
+
+    title: "Forest Compartments",
+    // 允许点击林班显示 Popup
+    popupEnabled: true,
+    popupTemplate: {
+
+      title: "Compartment {comp_id}",
+
+      content: [
+        {
+          type: "fields",
+
+          fieldInfos: [
+
+            {
+              fieldName: "forest_name",
+              label: "Forest"
+            },
+
+            {
+              fieldName: "comp_id",
+              label: "Compartment ID"
+            },
+
+            {
+              fieldName: "area_ha",
+              label: "Area (ha)",
+              format: {
+                places: 1,
+                digitSeparator: true
+              }
+            },
+
+            {
+              fieldName: "forest_type",
+              label: "Forest Type"
+            },
+
+            {
+              fieldName: "species",
+              label: "Species"
+            },
+
+            {
+              fieldName: "old_status",
+              label: "Before Status"
+            },
+
+            {
+              fieldName: "new_status",
+              label: "After Status"
+            },
+
+            {
+              fieldName: "change_type",
+              label: "Change Type"
+            },
+
+            {
+              fieldName: "change_conf",
+              label: "Change Confidence"
+            },
+
+            {
+              fieldName: "change_note",
+              label: "Change Description"
+            },
+
+            {
+              fieldName: "source",
+              label: "Imagery Source"
+            }
+
+          ]
+        }
+      ]
+    },
+
+    renderer: {
+      type: "simple",
+      
+      symbol: {
+        type: "simple-fill",
+
+        // 完全透明，不挡航空影像
+        color: [255, 255, 255, 0],
+
+        outline: {
+          color: [255, 230, 0, 1],
+          width: 1.5
+        }
+      }
+    }
+
+  });
+
+const studyAreaLayer =
+  new GeoJSONLayer({
+
+    url: "./data/study_area.geojson",
+
+    title: "Study Area",
+
+    popupEnabled: false,
+
+    renderer: {
+      type: "simple",
+
+      symbol: {
+        type: "simple-fill",
+
+        // 完全透明
+        color: [255, 255, 255, 0],
+
+        // Study Area 边界
+        outline: {
+          color: [255, 255, 255, 1],
+          width: 2
+        }
+      }
+    }
+
+  });
+
+    // -----------------------------
+    // Create map
+    // -----------------------------
+
+    mapElement.map =
+      new Map({
+
+        basemap: null,
+
+        layers: [
+          beforeLayer,
+          afterLayer,
+          studyAreaLayer,
+          forestLayer
+        ]
+
+      });
+
+
+    try {
+
+      // Wait until map is ready
+      await mapElement.viewOnReady();
+
+  // -------------------------------------
+  // Fix popup position
+  // -------------------------------------
+
+  mapElement.popupElement.dockEnabled = true;
+
+  mapElement.popupElement.dockOptions = {
+    position: "top-right",
+    breakpoint: false,
+    buttonEnabled: false
+  };
+
+
+  // -------------------------------------
+  // Highlight style
+  // -------------------------------------
+
+  const defaultHighlight =
+    mapElement.highlights.find(
+      (item) => item.name === "default"
+    );
+
+  if (defaultHighlight) {
+
+    defaultHighlight.color =
+      [220, 40, 40, 1];
+
+    defaultHighlight.haloOpacity =
+      1;
+
+    defaultHighlight.fillOpacity =
+      0.18;
+  }
+
+      // Load both COG layers
+      await Promise.all([
+
+        beforeLayer.load(),
+
+        afterLayer.load(),
+
+        studyAreaLayer.load(),
+
+        forestLayer.load()
+
+      ]);
+
+    // -------------------------------------
+// Read all compartments
+// -------------------------------------
+
+const compartmentResult =
+  await forestLayer.queryFeatures({
+    where: "1=1",
+    outFields: ["*"],
+    returnGeometry: true
+  });
+
+const compartmentFeatures =
+  compartmentResult.features;
+
+console.log(
+  "Compartment count:",
+  compartmentFeatures.length
+);
+
+console.log(
+  "First compartment:",
+  compartmentFeatures[0]
+);
+
+
+// Sort C001, C002, C003...
+compartmentFeatures.sort(
+  (a, b) =>
+    a.attributes.comp_id.localeCompare(
+      b.attributes.comp_id,
+      undefined,
+      { numeric: true }
+    )
+);
+
+
+// Automatically build dropdown
+compartmentFeatures.forEach(
+  (feature) => {
+
+    const compId =
+      feature.attributes.comp_id;
+
+    const option =
+      document.createElement("option");
+
+    option.value = compId;
+    option.textContent = compId;
+
+    compartmentSelect.appendChild(
+      option
+    );
+  }
+);
+
+      // ------------------------------------------------
+// Get Study Area polygon
+// ------------------------------------------------
+
+const studyAreaResult =
+  await studyAreaLayer.queryFeatures({
+
+    where: "1=1",
+
+    returnGeometry: true,
+
+    outFields: []
+
+  });
+
+
+const studyAreaGeometry =
+  studyAreaResult.features[0].geometry;
+
+
+// ------------------------------------------------
+// Project Study Area polygon
+// to each imagery coordinate system
+// ------------------------------------------------
+
+if (!projectOperator.isLoaded()) {
+
+  await projectOperator.load();
+
+}
+
+
+const studyAreaBefore =
+  projectOperator.execute(
+    studyAreaGeometry,
+    beforeLayer.spatialReference
+  );
+
+
+const studyAreaAfter =
+  projectOperator.execute(
+    studyAreaGeometry,
+    afterLayer.spatialReference
+  );
+
+
+// ------------------------------------------------
+// Clip BEFORE imagery
+// ------------------------------------------------
+
+beforeLayer.rasterFunction =
+  rasterFunctionUtils.clip({
+
+    geometry: studyAreaBefore,
+
+    keepOutside: false
+
+  });
+
+
+// ------------------------------------------------
+// Clip AFTER imagery
+// ------------------------------------------------
+
+afterLayer.rasterFunction =
+  rasterFunctionUtils.clip({
+
+    geometry: studyAreaAfter,
+
+    keepOutside: false
+
+  });
+
+const forestLayerView =
+  await mapElement.whenLayerView(forestLayer);
+
+let highlightHandle = null;
+
+async function selectCompartment(feature) {
+
+  if (!feature) {
+    return;
+  }
+
+
+  // Clear previous highlight
+  if (highlightHandle) {
+    highlightHandle.remove();
+    highlightHandle = null;
+  }
+
+
+  // Red highlight
+  highlightHandle =
+    forestLayerView.highlight(
+      feature
+    );
+
+
+  // Zoom to compartment
+  await mapElement.goTo(
+    feature.geometry.extent.expand(1.4),
+    {
+      duration: 700
+    }
+  );
+
+
+  // Open fixed popup
+  mapElement.openPopup({
+    features: [feature],
+    location:
+      feature.geometry.extent.center
+  });
+
+}
+
+compartmentSelect.addEventListener(
+  "change",
+  async () => {
+
+    const selectedId =
+      compartmentSelect.value;
+
+    if (!selectedId) {
+      return;
+    }
+
+    const selectedFeature =
+      compartmentFeatures.find(
+        (feature) =>
+          feature.attributes.comp_id ===
+          selectedId
+      );
+
+    if (selectedFeature) {
+
+      await selectCompartment(
+        selectedFeature
+      );
+
+    }
+
+  }
+);
+
+mapElement.addEventListener("arcgisViewClick", async (event) => {
+
+  const hit = await mapElement.hitTest(event.detail);
+
+  const result =
+    hit.results.find(
+      (item) =>
+        item.graphic?.layer === forestLayer
+    );
+
+  // 点击到林班
+  if (result) {
+
+    // 清除上一次高亮
+    if (highlightHandle) {
+      highlightHandle.remove();
+    }
+
+    // 高亮当前林班
+    highlightHandle =
+      forestLayerView.highlight(
+        result.graphic
+      );
+
+  }
+
+});
+
+      // Zoom to before imagery
+const overlapExtent =
+  beforeLayer.fullExtent
+    .clone()
+    .intersection(
+      afterLayer.fullExtent
+    );
+
+if (overlapExtent) {
+
+  await mapElement.goTo(
+    overlapExtent.clone().expand(0.95)
+  );
+
+} else {
+
+  console.warn(
+    "Before and after imagery do not overlap."
+  );
+
+  await mapElement.goTo(
+    beforeLayer.fullExtent
+  );
+
+}
+      
+
+
+      // -----------------------------
+      // Swipe
+      // -----------------------------
+
+      await swipe.componentOnReady();
+
+
+      swipe.startLayers.add(
+        beforeLayer
+      );
+
+
+      swipe.endLayers.add(
+        afterLayer
+      );
+
+
+      status.textContent =
+        "Before / After imagery loaded";
+
+
+      // Hide status message
+      setTimeout(() => {
+
+        status.style.display =
+          "none";
+
+      }, 2500);
+
+
+    } catch (error) {
+
+      console.error(error);
+
+      status.textContent =
+        "Error loading imagery — check Console";
+
+    }
+
+  </script>
+
+</body>
+
+</html>
