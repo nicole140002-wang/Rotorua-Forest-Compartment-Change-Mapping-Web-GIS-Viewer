@@ -195,12 +195,27 @@ The table below summarises forest-condition transitions between the 2015–2017 
 
 The largest unchanged category was **Standing Forest → Standing Forest**, covering approximately **942.91 ha**. The largest forest-condition transition was **Harvested / Cleared → Standing Forest**, involving **11 compartments and 371.48 ha**, indicating substantial plantation establishment and canopy development between the two imagery periods.
 
+### 3. Forest Area By Change Type 
+Change types were summarised by the total area of the 38 reviewed forest compartments.
+
+- No change was the dominant category, covering 942.91 ha (63.59%).
+- Replanted areas accounted for 238.58 ha (16.09%).
+- Regenerated areas accounted for 226.58 ha (15.28%).
+- Harvested areas covered 74.55 ha (5.03%).
+- New forest represented only 0.25 ha of the study area.
+
+Together, replanted and regenerated areas covered approximately 465.16 ha, showing that a substantial proportion of the study area experienced plantation recovery or establishment between the two imagery periods.
+
+<p align="center"> <img width="850" alt="Forest area by change type" src="https://github.com/user-attachments/assets/35d15357-5994-4e07-85a1-e6d6f8a902da" /> </p>
+
+<p align="center"> <em>Figure 9. Total forest compartment area by identified change type across the Rotorua study area.</em> </p>
+
 
 ## Technology
 
-ArcGIS Pro
-ArcGIS Maps SDK for JavaScript
-GeoJSON
-Cloud Optimized GeoTIFF
-HTML / CSS / JavaScript
+- ArcGIS Pro
+- ArcGIS Maps SDK for JavaScript
+- GeoJSON
+- Cloud Optimized GeoTIFF
+- HTML / CSS / JavaScript
 
