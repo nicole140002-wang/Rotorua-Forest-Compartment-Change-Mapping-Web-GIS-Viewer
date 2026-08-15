@@ -281,9 +281,10 @@ Together, replanted and regenerated areas covered approximately 465.16 ha, showi
 
 ## Technology
 
-- ArcGIS Pro
-- ArcGIS Maps SDK for JavaScript
-- GeoJSON
-- Cloud Optimized GeoTIFF
-- HTML / CSS / JavaScript
+- **Desktop GIS:** ArcGIS Pro
+- **Web GIS:** ArcGIS Maps SDK for JavaScript
+- **Raster:** GeoTIFF, Cloud Optimized GeoTIFF (COG), `ImageryTileLayer`
+- **Vector:** GeoJSON, `GeoJSONLayer`
+- **Web Development:** HTML, CSS, JavaScript
+- **Web GIS Functions:** Swipe comparison, raster clipping, feature queries, popup templates, feature highlighting
 
