@@ -125,16 +125,70 @@ These changes indicate a strong overall shift toward established standing planta
 ### 2. Forest Condition Transitions
 The table below summarises forest-condition transitions between the 2015–2017 and 2024–2025 imagery periods, ranked by total transition area.  
 
-| Rank | Forest Condition Transition | Compartments | Area (ha) |
-| ---: | --- | ---: | ---: |
-| 1 | Standing Forest → Standing Forest | 16 | 942.91 |
-| 2 | Harvested / Cleared → Standing Forest | 11 | 371.48 |
-| 3 | Standing Forest → Harvested / Cleared | 3 | 74.55 |
-| 4 | Regenerating / Early Growth → Standing Forest | 3 | 68.67 |
-| 5 | Young Plantation → Standing Forest | 2 | 16.87 |
-| 6 | Standing Forest → Young Plantation | 1 | 5.52 |
-| 7 | Harvested / Cleared → Young Plantation | 1 | 2.63 |
-| 8 | Open / Bare → Standing Forest | 1 | 0.25 |
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th align="center">Rank</th>
+      <th align="left">Forest Condition Transition</th>
+      <th align="center">Compartments</th>
+      <th align="center">Area (ha)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td>Standing Forest → Standing Forest</td>
+      <td align="center">16</td>
+      <td align="center">942.91</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td>Harvested / Cleared → Standing Forest</td>
+      <td align="center">11</td>
+      <td align="center">371.48</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td>Standing Forest → Harvested / Cleared</td>
+      <td align="center">3</td>
+      <td align="center">74.55</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td>Regenerating / Early Growth → Standing Forest</td>
+      <td align="center">3</td>
+      <td align="center">68.67</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td>Young Plantation → Standing Forest</td>
+      <td align="center">2</td>
+      <td align="center">16.87</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td>Standing Forest → Young Plantation</td>
+      <td align="center">1</td>
+      <td align="center">5.52</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td>Harvested / Cleared → Young Plantation</td>
+      <td align="center">1</td>
+      <td align="center">2.63</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td>Open / Bare → Standing Forest</td>
+      <td align="center">1</td>
+      <td align="center">0.25</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 **Total:** 38 compartments covering approximately **1,482.87 ha**.
 
