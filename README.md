@@ -76,7 +76,7 @@ A total of 38 forest compartments were reviewed in ArcGIS Pro using the 2024–2
 
 Where visible compartment boundaries no longer aligned with recent forest conditions, polygon geometry was edited at the vertex level. Key attributes were also updated to record compartment ID, area, current forest status, change confidence and supporting edit notes.
 
-<p align="center"> <img width="750" alt="Forest compartment boundary editing in ArcGIS Pro" src="YOUR_IMAGE_URL" /> </p>
+<p align="center"> <img width="750" alt="Forest compartment boundary editing in ArcGIS Pro" src="https://github.com/user-attachments/assets/a252445b-9cf4-4838-826f-bcb3275fd668" /> </p>
 
 <p align="center"> <em>Figure 3. Vertex-level editing of a forest compartment boundary in ArcGIS Pro using recent aerial imagery as spatial reference.</em> </p>
 
