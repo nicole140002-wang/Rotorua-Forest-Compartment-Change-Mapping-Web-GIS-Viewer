@@ -83,13 +83,14 @@ Comparison: The 2015–2017 imagery shows an established forest canopy, while th
 An interactive viewer was developed using ArcGIS Maps SDK for JavaScript.
 Key functions include:
 
-(1) Before / After imagery swipe
-(2) Study-area imagery clipping
-(3) Forest compartment overlay
-(4) Compartment selector
-(5) Automatic zoom
-(6) Selected-feature highlighting
-(7) Fixed attribute popup
+- Before / After imagery swipe
+- Study-area imagery clipping
+- Forest compartment overlay
+- Compartment selector
+- Automatic zoom
+- Selected-feature highlighting
+- Fixed attribute popup
+  
 <img width="1807" height="1116" alt="image" src="https://github.com/user-attachments/assets/c68ae888-1fd9-4921-a166-af019500519a" />
 
 *Figure 6. ArcGIS Web GIS interface combining imagery swipe comparison, forest compartment selection, automatic zoom, selected-feature highlighting, and a fixed attribute popup.*
