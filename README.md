@@ -1,23 +1,21 @@
 # Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
 
-A geospatial forestry mapping and Web GIS project using multi-temporal LINZ rural aerial imagery to review forest compartment changes in a Rotorua study area, update compartment attributes and boundaries, perform spatial QA/QC, and communicate changes through an interactive before/after imagery viewer.
-
-The project demonstrates a practical workflow from **aerial imagery interpretation and GIS data maintenance through to interactive Web GIS delivery**.
+An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, ArcGIS Pro and ArcGIS Maps SDK for JavaScript to review forest compartment changes and present the results in an interactive before/after Web GIS viewer.
 
 ## Final Output
 
 <img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
 
 ## Project Overview
-Forest estate spatial information needs to be periodically reviewed as harvesting, regeneration, replanting, road development and land-cover change can make existing compartment information outdated.
-This project develops a small Rotorua forestry demonstration workflow using two generations of rural aerial imagery:
+Two aerial imagery periods were compared:
 **Historical imagery**: 2015–2017([Bay of Plenty 0.25m Rural Aerial Photos (2015-2017)](https://data.linz.govt.nz/layer/88130-bay-of-plenty-025m-rural-aerial-photos-2015-2017/))
 **Recent imagery**: 2024–2025([Bay of Plenty West 0.2m Rural Aerial Photos (2024-2025)](https://data.linz.govt.nz/layer/120065-bay-of-plenty-west-02m-rural-aerial-photos-2024-2025/))
 
-A study area was defined in the Rotorua / Bay of Plenty region and 38 forest compartments were reviewed using the recent aerial imagery.
-Compartment geometry and attributes were updated based on visible land-cover and forestry changes, followed by topology and geometry QA/QC.
+A Rotorua study area containing 38 forest compartments was reviewed and updated based on visible forestry and land-cover changes.
 
-The updated forest compartment layer was then integrated with both imagery periods in an ArcGIS Maps SDK for JavaScript Web GIS viewer, allowing users to interactively compare historical and recent imagery using a swipe interface.
+The workflow included:
+
+**Aerial imagery → compartment review → attribute update → topology/QA → Web GIS visualisation.**
 
 ## Key Questions
 This project focuses on three practical GIS questions:
@@ -42,4 +40,22 @@ Primary GIS analysis:
 Web GeoJSON layers:
 **WGS 84 — EPSG:4326**
 
-The ArcGIS Maps SDK handles projection between the Web GIS vector layers and imagery spatial reference during visualisation.
+## GIS Workflow
+### 1. Imagery preparation
+
+LINZ Rural Aerial Imagery was prepared and mosaic in ArcGIS Pro.
+Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GIS use.
+
+### 2. Compartment review
+38 forest compartments were visually reviewed against the 2024–2025 imagery.
+Attributes recorded include:
+
+| compartment ID | 
+| area | 
+| historical status | 
+| recent status | 
+| change type | 
+| change confidence | 
+| change description | 
+
+### 3. 
