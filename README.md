@@ -60,9 +60,10 @@ This project focuses on three practical GIS questions:
 
 ### Coordinate Reference System
 
-Primary GIS analysis:
+- Primary GIS analysis:
 **NZGD2000 / New Zealand Transverse Mercator 2000 — EPSG:2193**
-Web GeoJSON layers:
+  
+- Web GeoJSON layers:
 **WGS 84 — EPSG:4326**
 
 ## GIS Workflow
