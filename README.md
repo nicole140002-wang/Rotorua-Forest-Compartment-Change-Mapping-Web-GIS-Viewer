@@ -10,17 +10,20 @@ An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, Arc
 
 ## Key Results
 
-<p align="center">
-<strong>38 compartments</strong> &nbsp;•&nbsp;
-<strong>1,482.87 ha</strong> reviewed &nbsp;•&nbsp;
-<strong>63.59%</strong> no change &nbsp;•&nbsp;
-<strong>31.37%</strong> replanted / regenerated &nbsp;•&nbsp;
-<strong>5.03%</strong> harvested
-</p>
+<h2 align="center">
+38 Compartments &nbsp; | &nbsp; 1,482.87 ha
+</h2>
+
+<h3 align="center">
+63.59% No Change &nbsp;•&nbsp;
+31.37% Replanted / Regenerated &nbsp;•&nbsp;
+5.03% Harvested
+</h3>
 
 <p align="center">
-<em>Forest-condition change identified between the 2015–2017 and 2024–2025 aerial imagery periods.</em>
+<em>2015–2017 → 2024–2025 aerial imagery comparison</em>
 </p>
+
 
 ## Project Overview
 Two aerial imagery periods were compared:
