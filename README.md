@@ -4,7 +4,7 @@ A geospatial forestry mapping and Web GIS project using multi-temporal LINZ rura
 
 The project demonstrates a practical workflow from **aerial imagery interpretation and GIS data maintenance through to interactive Web GIS delivery**.
 
-![Uploading image.png…]()
+<img width="2536" height="1466" alt="image" src="https://github.com/user-attachments/assets/0abb57d9-db24-4e32-96a3-d81797fe2102" />
 
 ## Project Overview
 Forest estate spatial information needs to be periodically reviewed as harvesting, regeneration, replanting, road development and land-cover change can make existing compartment information outdated.
