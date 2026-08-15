@@ -169,6 +169,8 @@ Key functions include:
 The two Web-optimised COG datasets are loaded using `ImageryTileLayer`, while forest compartments and the study-area boundary are loaded as `GeoJSONLayer` objects.
 
 The study-area geometry is dynamically projected and used to clip both imagery layers in the browser. Forest compartments are queried directly from the GeoJSON dataset to populate the selector, allowing users to select a compartment and automatically **zoom, highlight and display its change attributes**.
+
+Forest compartments are queried directly from the GeoJSON dataset to populate the selector.
   
 ## Results
 
