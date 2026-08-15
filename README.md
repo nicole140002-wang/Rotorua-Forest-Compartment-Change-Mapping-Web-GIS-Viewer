@@ -5,6 +5,7 @@ An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, Arc
 ## Final Output
 
 <img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
+
 *Figure 1. Interactive forestry change viewer showing multi-temporal aerial imagery, forest compartment boundaries, selected-compartment highlighting, and attribute information.*
 
 ## Project Overview
@@ -15,7 +16,7 @@ Two aerial imagery periods were compared:
 
 A Rotorua study area containing **38 forest compartments** was reviewed and updated based on visible forestry and land-cover changes.
 <img width="2062" height="1153" alt="image" src="https://github.com/user-attachments/assets/20daa3af-5f8a-4bff-9bef-728e19c565db" />
-*Figure 1. Rotorua study area and forest compartments reviewed in this project.*
+*Figure 2. Rotorua study area and forest compartments reviewed in this project.*
 
 ## Key Questions
 This project focuses on three practical GIS questions:
