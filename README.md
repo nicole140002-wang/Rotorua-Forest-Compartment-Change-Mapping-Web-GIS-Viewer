@@ -8,6 +8,12 @@ An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, Arc
 
 *Figure 1. Interactive forestry change viewer showing multi-temporal aerial imagery, forest compartment boundaries, selected-compartment highlighting, and attribute information.*
 
+## Key Results
+
+<table> <tr> <td align="center" width="20%"> <strong>38</strong><br> Forest Compartments </td> <td align="center" width="20%"> <strong>1,482.87 ha</strong><br> Study Area </td> <td align="center" width="20%"> <strong>63.59%</strong><br> No Change </td> <td align="center" width="20%"> <strong>31.37%</strong><br> Replanted / Regenerated </td> <td align="center" width="20%"> <strong>5.03%</strong><br> Harvested </td> </tr> </table>
+
+Across the 38 reviewed compartments, most of the study area remained established forest, while approximately 465.16 ha was classified as replanted or regenerated and 74.55 ha was identified as harvested.
+
 ## Project Overview
 Two aerial imagery periods were compared:
 
