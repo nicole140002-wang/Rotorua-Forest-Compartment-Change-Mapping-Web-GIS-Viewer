@@ -34,7 +34,7 @@ Two aerial imagery periods were compared:
 A Rotorua study area containing **38 forest compartments** was reviewed and updated based on visible forestry and land-cover changes.  
 
 <p align="center">
-  <img width="850"
+  <img width="750"
        alt="Rotorua study area and forest compartments"
        src="https://github.com/user-attachments/assets/20daa3af-5f8a-4bff-9bef-728e19c565db" />
 </p>
