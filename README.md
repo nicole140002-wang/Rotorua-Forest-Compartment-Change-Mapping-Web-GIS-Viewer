@@ -14,7 +14,8 @@ Two aerial imagery periods were compared:
 - **Historical imagery:** 2015–2017 ([Bay of Plenty 0.25m Rural Aerial Photos (2015–2017)](...))
 - **Recent imagery:** 2024–2025 ([Bay of Plenty West 0.2m Rural Aerial Photos (2024–2025)](...))
 
-A Rotorua study area containing **38 forest compartments** was reviewed and updated based on visible forestry and land-cover changes.
+A Rotorua study area containing **38 forest compartments** was reviewed and updated based on visible forestry and land-cover changes.  
+
 <img width="2062" height="1153" alt="image" src="https://github.com/user-attachments/assets/20daa3af-5f8a-4bff-9bef-728e19c565db" />
 *Figure 2. Rotorua study area and forest compartments reviewed in this project.*
 
