@@ -1,10 +1,10 @@
-# Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
+<img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/ef1b72fe-d0da-48f5-aa74-85713afc1992" /># Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
 
 A geospatial forestry mapping and Web GIS project using multi-temporal LINZ rural aerial imagery to review forest compartment changes in a Rotorua study area, update compartment attributes and boundaries, perform spatial QA/QC, and communicate changes through an interactive before/after imagery viewer.
 
 The project demonstrates a practical workflow from **aerial imagery interpretation and GIS data maintenance through to interactive Web GIS delivery**.
 
-<img width="2536" height="1466" alt="image" src="https://github.com/user-attachments/assets/0abb57d9-db24-4e32-96a3-d81797fe2102" />
+<img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
 
 ## Project Overview
 Forest estate spatial information needs to be periodically reviewed as harvesting, regeneration, replanting, road development and land-cover change can make existing compartment information outdated.
