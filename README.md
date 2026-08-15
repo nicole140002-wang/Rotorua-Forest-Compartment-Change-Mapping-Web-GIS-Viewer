@@ -8,11 +8,13 @@ An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, Arc
 
 ## Project Overview
 Two aerial imagery periods were compared:
-**Historical imagery**: 2015–2017([Bay of Plenty 0.25m Rural Aerial Photos (2015-2017)](https://data.linz.govt.nz/layer/88130-bay-of-plenty-025m-rural-aerial-photos-2015-2017/))
-**Recent imagery**: 2024–2025([Bay of Plenty West 0.2m Rural Aerial Photos (2024-2025)](https://data.linz.govt.nz/layer/120065-bay-of-plenty-west-02m-rural-aerial-photos-2024-2025/))
 
-A Rotorua study area containing 38 forest compartments was reviewed and updated based on visible forestry and land-cover changes.
-<img width="1594" height="1165" alt="image" src="https://github.com/user-attachments/assets/5d6f976f-ed53-4828-b7ed-62941c142a3d" />
+- **Historical imagery:** 2015–2017 ([Bay of Plenty 0.25m Rural Aerial Photos (2015–2017)](...))
+- **Recent imagery:** 2024–2025 ([Bay of Plenty West 0.2m Rural Aerial Photos (2024–2025)](...))
+
+A Rotorua study area containing **38 forest compartments** was reviewed and updated based on visible forestry and land-cover changes.
+<img width="2062" height="1153" alt="image" src="https://github.com/user-attachments/assets/20daa3af-5f8a-4bff-9bef-728e19c565db" />
+*Figure 1. Rotorua study area and forest compartments reviewed in this project.*
 
 ## Key Questions
 This project focuses on three practical GIS questions:
