@@ -153,8 +153,9 @@ Before Web GIS publication, **Pairwise Intersect** was used to identify unintend
 
 
 
-### 4. Web GIS
-An interactive viewer was developed using ArcGIS Maps SDK for JavaScript.
+### 4. Interactive Web GIS 
+An interactive forestry change viewer was developed using the **ArcGIS Maps SDK for JavaScript**.
+
 Key functions include:
 
 - Before / After imagery swipe
@@ -164,6 +165,10 @@ Key functions include:
 - Automatic zoom
 - Selected-feature highlighting
 - Fixed attribute popup
+
+The two Web-optimised COG datasets are loaded using `ImageryTileLayer`, while forest compartments and the study-area boundary are loaded as `GeoJSONLayer` objects.
+
+The study-area geometry is dynamically projected and used to clip both imagery layers in the browser. Forest compartments are queried directly from the GeoJSON dataset to populate the selector, allowing users to select a compartment and automatically **zoom, highlight and display its change attributes**.
   
 ## Results
 
