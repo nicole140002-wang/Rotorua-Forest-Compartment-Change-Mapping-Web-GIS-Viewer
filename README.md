@@ -65,12 +65,15 @@ The workflow included:
 
 **Aerial imagery → compartment review → attribute update → topology/QA → Web GIS visualisation.**
 
-### 1. Imagery preparation
+### 1. Aerial Imagery Acquisition & Preparation
 
-LINZ Rural Aerial Imagery was prepared and mosaicked in ArcGIS Pro.
-Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GIS use.
+LINZ Rural Aerial Imagery covering the defined Rotorua study area was downloaded for two periods: **2015–2017** and **2024–2025**.
 
-### 2. Compartment Editing & Attribute Update
+Individual image tiles for each period were mosaicked separately in ArcGIS Pro to create two continuous aerial imagery datasets representing the **before (2015–2017)** and **after (2024–2025)** conditions.
+
+For Web GIS delivery, the large mosaic TIFF datasets were converted to **Cloud Optimized GeoTIFF (COG)** format. The original imagery files were approximately **1.5 GB**, while the Web-optimised COG outputs were reduced to approximately **700 MB** and **500 MB**, enabling more efficient browser-based imagery access.
+
+### 2. Forest Compartment Digitising & Attribute Update
 
 A total of 38 forest compartments were reviewed in ArcGIS Pro using the 2024–2025 aerial imagery.
 
