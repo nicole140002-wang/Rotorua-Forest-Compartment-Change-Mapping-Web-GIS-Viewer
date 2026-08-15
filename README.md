@@ -105,7 +105,7 @@ Key functions include:
 
 ## Results
 
-### Forest Condition Area Change
+### 1. Forest Condition Area Change
 The total study area remained approximately 1,483 ha, while the distribution of forest condition changed substantially between the two imagery periods. 
 - Standing forest **increased** from 1,022.97 ha to 1,400.17 ha.
 - Harvested area **decreased** from 374.10 ha to 74.54 ha.
@@ -122,7 +122,23 @@ These changes indicate a strong overall shift toward established standing planta
   <em>Figure 8. Total forest compartment area by condition for the 2015–2017 and 2024–2025 imagery periods.</em>
 </p>
 
+### 2. Forest Condition Transitions
+The table below summarises forest-condition transitions between the 2015–2017 and 2024–2025 imagery periods, ranked by total transition area.  
 
+| Rank | Forest Condition Transition | Compartments | Area (ha) |
+| ---: | --- | ---: | ---: |
+| 1 | Standing Forest → Standing Forest | 16 | 942.91 |
+| 2 | Harvested / Cleared → Standing Forest | 11 | 371.48 |
+| 3 | Standing Forest → Harvested / Cleared | 3 | 74.55 |
+| 4 | Regenerating / Early Growth → Standing Forest | 3 | 68.67 |
+| 5 | Young Plantation → Standing Forest | 2 | 16.87 |
+| 6 | Standing Forest → Young Plantation | 1 | 5.52 |
+| 7 | Harvested / Cleared → Young Plantation | 1 | 2.63 |
+| 8 | Open / Bare → Standing Forest | 1 | 0.25 |
+
+**Total:** 38 compartments covering approximately **1,482.87 ha**.
+
+The largest unchanged category was **Standing Forest → Standing Forest**, covering approximately **942.91 ha**. The largest forest-condition transition was **Harvested / Cleared → Standing Forest**, involving **11 compartments and 371.48 ha**, indicating substantial plantation establishment and canopy development between the two imagery periods.
 
 
 ## Technology
