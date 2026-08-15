@@ -5,6 +5,7 @@ An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, Arc
 ## Final Output
 
 <img width="2545" height="1347" alt="image" src="https://github.com/user-attachments/assets/71964922-cf15-42f2-97dd-0a47c153df25" />
+*Figure 1. Interactive forestry change viewer showing multi-temporal aerial imagery, forest compartment boundaries, selected-compartment highlighting, and attribute information.*
 
 ## Project Overview
 Two aerial imagery periods were compared:
@@ -54,6 +55,7 @@ Large TIFF imagery was converted to **Cloud Optimized GeoTIFF (COG)** for Web GI
 Attributes included compartment ID, area, historical status, recent status, change type, change confidence and change description. 
 
 <img width="2161" height="1214" alt="image" src="https://github.com/user-attachments/assets/91b9b797-a73f-4842-9dbe-0047c8e12ed1" />
+*Figure 3. Forest compartment review in ArcGIS Pro using recent aerial imagery to assess compartment condition, boundaries, and associated attributes.*
 
 ### 3. Forest Condition Update & QA/QC
 
@@ -62,14 +64,16 @@ Forest compartment boundaries, conditions and attributes were reviewed using the
 Example 1 — Forest condition change
 
 <table> <tr> <td align="center"><b>2015–2017</b></td> <td align="center"><b>2024–2025</b></td> </tr> <tr> <td width="50%"> <img width="100%" alt="Historical aerial imagery 2015-2017" src="https://github.com/user-attachments/assets/e5751a31-2fed-44b5-ac03-6aaf4e129e6d" /> </td> <td width="50%"> <img width="100%" alt="Recent aerial imagery 2024-2025" src="https://github.com/user-attachments/assets/1276955e-ffaa-48fc-8694-17f91422725b" /> </td> </tr> </table>
+*Figure 4. Example of forest-condition change identified by comparing historical 2015–2017 imagery with recent 2024–2025 imagery.*
 
-Comparison: The same compartment area was reviewed across the two imagery periods to identify changes in forest condition and verify whether the existing compartment status and attributes required updating.
+Comparison: The 2015–2017 imagery shows a recently planted compartment with young, sparsely established trees. By 2024–2025, the same area had developed into a dense, established plantation canopy, indicating substantial forest growth over the period.
 
 Example 2 — Compartment update and validation
 
 <table> <tr> <td align="center"><b>2015–2017</b></td> <td align="center"><b>2024–2025</b></td> </tr> <tr> <td width="50%"> <img width="100%" alt="Historical compartment condition 2015-2017" src="https://github.com/user-attachments/assets/168e52f6-9aaa-4887-b3ed-d6aaec32cfd4" /> </td> <td width="50%"> <img width="100%" alt="Updated compartment condition 2024-2025" src="https://github.com/user-attachments/assets/bba48ac5-a20b-4492-b7d4-412cf50035b8" /> </td> </tr> </table>
+*Figure 5. Example of compartment update and validation using multi-temporal imagery to confirm visible forestry change and check the updated spatial information.*
 
-Comparison: Historical and recent imagery were compared to confirm visible forestry change, update compartment attributes where required, and check that the final geometry remained consistent with observable forest boundaries.
+Comparison: The 2015–2017 imagery shows an established forest canopy, while the 2024–2025 imagery shows the compartment largely clear-cut, with exposed ground and scattered felled logs still visible across the harvested area.
 
 ### 4. Web GIS
 An interactive viewer was developed using ArcGIS Maps SDK for JavaScript.
@@ -83,6 +87,7 @@ Key functions include:
 (6) Selected-feature highlighting
 (7) Fixed attribute popup
 <img width="1807" height="1116" alt="image" src="https://github.com/user-attachments/assets/c68ae888-1fd9-4921-a166-af019500519a" />
+*Figure 6. ArcGIS Web GIS interface combining imagery swipe comparison, forest compartment selection, automatic zoom, selected-feature highlighting, and a fixed attribute popup.*
 
 ## Results
 
