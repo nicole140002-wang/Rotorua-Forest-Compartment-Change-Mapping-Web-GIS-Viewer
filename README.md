@@ -1,4 +1,4 @@
-<img width="2141" height="1156" alt="image" src="https://github.com/user-attachments/assets/888462aa-8c99-43ac-9f86-16eb2cea2ee9" /><img width="2124" height="1160" alt="image" src="https://github.com/user-attachments/assets/59ddfcbe-36b3-47e0-af46-effd49702d61" /># Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
+# Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
 
 An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, ArcGIS Pro and ArcGIS Maps SDK for JavaScript to review forest compartment changes and present the results in an interactive before/after Web GIS viewer.
 
