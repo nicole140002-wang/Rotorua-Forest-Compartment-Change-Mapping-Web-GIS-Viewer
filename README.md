@@ -1,4 +1,4 @@
-# Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
+<img width="2141" height="1156" alt="image" src="https://github.com/user-attachments/assets/888462aa-8c99-43ac-9f86-16eb2cea2ee9" /><img width="2124" height="1160" alt="image" src="https://github.com/user-attachments/assets/59ddfcbe-36b3-47e0-af46-effd49702d61" /># Rotorua-Forest-Compartment-Change-Mapping-Web-GIS-Viewer
 
 An end-to-end forestry GIS project using LINZ multi-temporal aerial imagery, ArcGIS Pro and ArcGIS Maps SDK for JavaScript to review forest compartment changes and present the results in an interactive before/after Web GIS viewer.
 
@@ -63,21 +63,29 @@ Attributes included compartment ID, area, historical status, recent status, chan
 
 Forest compartment boundaries, conditions and attributes were reviewed using the 2015–2017 and 2024–2025 aerial imagery. Geometry, topology and attribute consistency were then checked before the updated layer was prepared for Web GIS use.
 
-#### Example 1 — Plantation growth
+#### Example 1 — Young Plantation to Established Forest Canopy
 
 <table> <tr> <td align="center"><b>2015–2017</b></td> <td align="center"><b>2024–2025</b></td> </tr> <tr> <td width="50%"> <img width="100%" alt="Historical aerial imagery 2015-2017" src="https://github.com/user-attachments/assets/e5751a31-2fed-44b5-ac03-6aaf4e129e6d" /> </td> <td width="50%"> <img width="100%" alt="Recent aerial imagery 2024-2025" src="https://github.com/user-attachments/assets/1276955e-ffaa-48fc-8694-17f91422725b" /> </td> </tr> </table>
 
-*Figure 4. Example of forest-condition change identified by comparing historical 2015–2017 imagery with recent 2024–2025 imagery.*
+*Figure 4. Plantation growth from recently established young trees in 2015–2017 to a dense, established forest canopy by 2024–2025.*
 
-Comparison: The 2015–2017 imagery shows a recently planted compartment with young, sparsely established trees. By 2024–2025, the same area had developed into a dense, established plantation canopy, indicating substantial forest growth over the period.
+**Comparison:** The 2015–2017 imagery shows a recently planted compartment with young, sparsely established trees. By 2024–2025, the same area had developed into a dense and continuous plantation canopy, indicating substantial forest growth over the period.
 
-#### Example 2 — Forest harvesting
+#### Example 2 — Established Forest to Harvested Clear-cut
 
 <table> <tr> <td align="center"><b>2015–2017</b></td> <td align="center"><b>2024–2025</b></td> </tr> <tr> <td width="50%"> <img width="100%" alt="Historical compartment condition 2015-2017" src="https://github.com/user-attachments/assets/168e52f6-9aaa-4887-b3ed-d6aaec32cfd4" /> </td> <td width="50%"> <img width="100%" alt="Updated compartment condition 2024-2025" src="https://github.com/user-attachments/assets/bba48ac5-a20b-4492-b7d4-412cf50035b8" /> </td> </tr> </table>
 
-*Figure 5. Example of compartment update and validation using multi-temporal imagery to confirm visible forestry change and check the updated spatial information.*
+*Figure 5. Forest harvesting change from an established plantation canopy in 2015–2017 to a recently clear-cut area in 2024–2025.*
 
-Comparison: The 2015–2017 imagery shows an established forest canopy, while the 2024–2025 imagery shows the compartment largely clear-cut, with exposed ground and scattered felled logs still visible across the harvested area.
+**Comparison:** The 2015–2017 imagery shows an established forest canopy, while the 2024–2025 imagery shows the compartment largely clear-cut, with exposed ground and scattered felled logs still visible across the harvested area.
+
+#### Example 3 - Harvested Land to Established Plantation Forest
+
+<table> <tr> <td align="center"><b>2015–2017</b></td> <td align="center"><b>2024–2025</b></td> </tr> <tr> <td width="50%"> <img width="100%" alt="Historical aerial imagery 2015-2017" src="https://github.com/user-attachments/assets/fe781337-4256-4ff8-9105-86fa540f42ff" /> </td> <td width="50%"> <img width="100%" alt="Recent aerial imagery 2024-2025" src="https://github.com/user-attachments/assets/b05b1a48-c2ba-4474-871a-7b25b5ccbcca" /> </td> </tr> </table>
+
+*Figure 6. Forest regeneration from post-harvest bare ground in 2015–2017 to an established plantation forest by 2024–2025.*
+
+**Comparison:** The 2015–2017 imagery shows a recently harvested compartment dominated by exposed ground with little established tree cover. By 2024–2025, the area had been replanted and developed into a well-established plantation forest with substantial canopy cover.
 
 ### 4. Web GIS
 An interactive viewer was developed using ArcGIS Maps SDK for JavaScript.
@@ -93,7 +101,7 @@ Key functions include:
   
 <img width="1807" height="1116" alt="image" src="https://github.com/user-attachments/assets/c68ae888-1fd9-4921-a166-af019500519a" />
 
-*Figure 6. ArcGIS Web GIS interface combining imagery swipe comparison, forest compartment selection, automatic zoom, selected-feature highlighting, and a fixed attribute popup.*
+*Figure 7. ArcGIS Web GIS interface combining imagery swipe comparison, forest compartment selection, automatic zoom, selected-feature highlighting, and a fixed attribute popup.*
 
 ## Results
 
