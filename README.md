@@ -113,7 +113,7 @@ Representative examples of the interpreted changes are shown below.
 
 **Comparison:** The 2015–2017 imagery shows a recently harvested compartment dominated by exposed ground with little established tree cover. By 2024–2025, the area had been replanted and developed into a well-established plantation forest with substantial canopy cover.
 
-#### QA/QC
+### 4. QA/QC
 
 Before Web GIS publication, **Pairwise Intersect** was used to identify unintended overlaps and potential topology issues between forest compartment polygons. Detected intersections were reviewed at multiple map scales to distinguish genuine boundary relationships from geometry errors, and compartment boundaries were corrected where required.
 
@@ -153,7 +153,7 @@ Before Web GIS publication, **Pairwise Intersect** was used to identify unintend
 
 
 
-### 4. Interactive Web GIS 
+### 5. Interactive Web GIS 
 An interactive forestry change viewer was developed using the **ArcGIS Maps SDK for JavaScript**.
 
 Key functions include:
